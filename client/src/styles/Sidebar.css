@@ -1,0 +1,107 @@
+.taskati-sidebar, .sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #4F8CFF 0%, #6BCBFF 100%);
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 16px 0 0 0;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  padding-left: 0 !important;
+  transition: width 0.2s;
+}
+.sidebar-header {
+  padding: 0 20px 20px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar-appname {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 0;
+  transition: opacity 0.2s;
+}
+.sidebar-collapse-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: color 0.2s;
+}
+.sidebar-collapse-btn:hover {
+  color: #e0e7ff;
+}
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+}
+.sidebar-nav-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: background 0.18s, color 0.18s;
+  margin: 2px 0;
+}
+.sidebar-nav-item.active, .sidebar-nav-item:hover {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+}
+.sidebar-nav-item i {
+  font-size: 1.2rem;
+  width: 22px;
+  text-align: center;
+}
+/* Collapsed sidebar styles */
+.taskati-sidebar.collapsed {
+  width: 64px;
+}
+.taskati-sidebar.collapsed .sidebar-appname {
+  opacity: 0;
+  pointer-events: none;
+}
+.taskati-sidebar.collapsed .sidebar-nav-item span {
+  display: none;
+}
+.taskati-sidebar.collapsed .sidebar-header {
+  justify-content: center;
+}
+/* Remove Get Pro section styles */
+.sidebar-pro-card, .pro-avatar, .pro-info, .pro-title, .pro-desc, .get-pro-btn {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .taskati-sidebar {
+    width: 100vw;
+    min-width: 0;
+    margin: 0;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1200;
+  }
+  .taskati-sidebar.collapsed {
+    width: 56px;
+  }
+} 
